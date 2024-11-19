@@ -39,6 +39,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: lowercase repo
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
       - uses: docker/build-push-action@v4
         with:
           context: ./java
