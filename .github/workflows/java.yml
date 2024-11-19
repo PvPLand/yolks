@@ -37,8 +37,8 @@ jobs:
       - uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: bloom-host
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v4
         with:
           context: ./java
@@ -46,4 +46,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/bloom-host/yolks:java_${{ matrix.tag }}
+            ghcr.io/${{ env.REPO }}:java_${{ matrix.tag }}

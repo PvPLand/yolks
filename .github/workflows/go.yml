@@ -32,6 +32,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.REGISTRY_TOKEN }}
+      - name: lowercase repo
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
       - uses: docker/build-push-action@v4
         with:
           context: ./go
@@ -39,4 +42,4 @@ jobs:
           platforms: linux/amd64, linux/arm64
           push: true
           tags: |
-            ghcr.io/pterodactyl/yolks:go_${{ matrix.tag }}
+            ghcr.io/${{ env.REPO }}:go_${{ matrix.tag }}

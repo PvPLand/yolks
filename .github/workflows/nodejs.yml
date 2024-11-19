@@ -33,8 +33,11 @@ jobs:
       - uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: lowercase repo
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
       - uses: docker/build-push-action@v4
         with:
           context: ./nodejs
@@ -42,4 +45,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/pterodactyl/yolks:nodejs_${{ matrix.tag }}
+            ghcr.io/${{ env.REPO }}:nodejs_${{ matrix.tag }}
