@@ -62,9 +62,9 @@ is tagged correctly.
   * [`java17`](java/17)
     * `ghcr.io/bloom-host/yolks:java_17`
   * [`java17 - Azul`](java/17-azul)
-	  * `ghcr.io/bloom-host/yolks:java_17-azul`
+	* `ghcr.io/bloom-host/yolks:java_17-azul`
   * [`java17 - GraalVM`](java/17-graalvm)
-	  * `ghcr.io/bloom-host/yolks:java_17-graalvm`
+    * `ghcr.io/bloom-host/yolks:java_17-graalvm`
   * [`java17 - OpenJ9`](java/17j9)
     * `ghcr.io/bloom-host/yolks:java_17j9`
   * [`java18`](java/18)
@@ -78,9 +78,11 @@ is tagged correctly.
   * [`java21`](java/21)
     * `ghcr.io/bloom-host/yolks:java_21`
   * [`java21 - Azul`](java/21-azul)
-	  * `ghcr.io/bloom-host/yolks:java_21-azul`
+	* `ghcr.io/bloom-host/yolks:java_21-azul`
   * [`java21 - GraalVM`](java/21-graalvm)
-	  * `ghcr.io/bloom-host/yolks:java_21-graalvm`
+	* `ghcr.io/bloom-host/yolks:java_21-graalvm`
+  * [`java21 - HTTP MITM Proxy`](java/21-http)
+	  * `ghcr.io/bloom-host/yolks:java_21-http`
   * [`java24`](java/24)
     * `ghcr.io/bloom-host/yolks:java_24`
 * [`nodejs`](nodejs)
