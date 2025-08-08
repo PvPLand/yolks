@@ -83,6 +83,8 @@ is tagged correctly.
 	* `ghcr.io/bloom-host/yolks:java_21-graalvm`
   * [`java21 - HTTP MITM Proxy`](java/21-http)
 	  * `ghcr.io/bloom-host/yolks:java_21-http`
+  * [`java21 - Misc Packages`](java/21-misc-packages)
+	  * `ghcr.io/bloom-host/yolks:java_21-misc-packages`
   * [`java24`](java/24)
     * `ghcr.io/bloom-host/yolks:java_24`
 * [`nodejs`](nodejs)
