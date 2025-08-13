@@ -35,6 +35,7 @@ jobs:
           - 21-azul
           - 21-graalvm
           - 24
+          - 24-graalvm
     steps:
       - uses: actions/checkout@v3
       - uses: docker/setup-qemu-action@v2
