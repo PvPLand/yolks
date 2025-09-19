@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH zulu-openjdk:25-jre
+FROM        --platform=$TARGETOS/$TARGETARCH azul/zulu-openjdk:25-jre
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
