@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH openjdk:25-jdk-slim
+FROM        --platform=$TARGETOS/$TARGETARCH amazoncorretto:25-jdk
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
