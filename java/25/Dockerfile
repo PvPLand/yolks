@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH amazoncorretto:25-jdk
+FROM        --platform=$TARGETOS/$TARGETARCH zulu-openjdk:25-jre
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
