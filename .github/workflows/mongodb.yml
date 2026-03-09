@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - mongodb/**
+      - database/nosql/mongodb/**
 permissions:
   packages: write
 
@@ -38,8 +38,8 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN || secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v6
         with:
-          context: ./mongodb
-          file: ./mongodb/${{ matrix.tag }}/Dockerfile
+          context: ./database/nosql/mongodb
+          file: ./database/nosql/mongodb/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
